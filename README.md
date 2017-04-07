@@ -1,7 +1,5 @@
 
-# Project 4
-
-**WDI-SM-43 Project 4 : Project.io**
+# Project.io
 
 **Project Description:**
 Project.io is a project management app that will help you stay organized and deliver on time.  All of your tasks, schedules, conversations, and team member output can now be found in one place with a simple and straightforward design.  Project.io allows you and your entire team to see the big picture so you'll always know exactly where you stand and what needs to be done.  
