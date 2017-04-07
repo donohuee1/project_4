@@ -15,7 +15,7 @@ Project.io is a project management app that will help you stay organized and del
 
 **ERD:**
 
-![erd](assets/ERD_PROJECT_4.png
+![erd](assets/ERD_PROJECT_4.png)
 
 **Wireframes:**
 
