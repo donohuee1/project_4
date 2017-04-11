@@ -1,6 +1,15 @@
 //define Projects collection
 Projects = new Meteor.Collection('projects');
 
+//rules for who is allowed to insert in projects function.  Only allowed if this is true(i.e. if userId exists)
+Projects.allow({
+  insert: function(userId, doc) {
+    return !!userId;
+  }
+});
+
+
+
 //Create new Schema
 ProjectSchema = new SimpleSchema({
   title: {
