@@ -1,10 +1,7 @@
 <template name="MainLayout">
-  <header>
-    <h1>Project.io Project Book</h1>
-    <!-- package -->
-    {{> loginButtons}}
-  </header>
-  <main>
+  {{> Header}}
+  {{> Nav}}
+  <main class="main-layout">
     <!-- Main area of the site.  Area for you to render content to -->
     {{> Template.dynamic template=main}}
   </main>
