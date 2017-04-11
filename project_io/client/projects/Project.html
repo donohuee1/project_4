@@ -1,0 +1,11 @@
+<template name="Project">
+  <article class="project">
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+    <p>
+      {{#each tasks}}
+        <span class="tasks">{{description}} - {{employeeLead}}</span>
+      {{/each}}
+    </p>
+  </article>
+</template>

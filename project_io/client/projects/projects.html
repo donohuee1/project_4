@@ -1,4 +1,9 @@
 <template name="Projects">
   <!-- another template to add a new Project.  New project is looking for template called NewProject -->
   {{> NewProject}}
+  <section class="projects">
+    {{#each projects}}
+      {{> Project}}
+    {{/each}}
+  </section>
 </template>

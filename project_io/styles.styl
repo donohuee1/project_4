@@ -66,8 +66,8 @@ social = {
     youtube: #bb0000
 }
 
-$side-nav = 100px
-$side-nav-large = 200px
+$nav = 100px
+$nav-large = 200px
 
 html
     box-sizing: border-box
@@ -81,7 +81,7 @@ body
 
 header
     color #FFF
-    background: purp
+    background: #E8846B
     padding 20px
     fixed top left
     width 100%
@@ -121,16 +121,16 @@ p
     margin-top 20px
     +above($med)
         lost-center 90%
-        padding-left $side-nav
+        padding-left $nav
     +above($large)
         lost-center 80%
         margin-top 40px
-        padding-left $side-nav-large
+        padding-left $nav-large
 
-.new-recipe
+.new-project
     margin-bottom 20px
 
-.new-recipe-container
+.new-project-container
     position relative
     background #FFF
     padding 20px
@@ -178,9 +178,9 @@ p
             background @background - 20
             border-color @background
     &.btn-text
-        color purp
+        color #E8846B
         background transparent
-        border solid 2px purp
+        border solid 2px #E8846B
         shadow-level(0)
         &:hover
             background teal
@@ -217,7 +217,7 @@ p
             border-color @background
 
 input, select, textarea
-    color purp
+    color #E8846B
     background #FFF
     border solid 2px light-grey
     border-radius 2px
@@ -260,12 +260,12 @@ input, select, textarea
 .autoform-remove-item-wrap
     vertical-align middle
 
-.side-nav
+.nav
     fixed bottom left
     height 100px
     width 100%
     overflow hidden
-    background dark-purp
+    background #E8846B
     color #FFF
     z-index: z.header
     shadow-level(2)
@@ -283,7 +283,7 @@ input, select, textarea
         text-align center
         trans()
         &:hover, &.active
-            background purp
+            background #E8846B
     i
         display block
         font-size 2em
@@ -293,7 +293,7 @@ input, select, textarea
         z-index: z.mid
         padding 120px 0
         fixed top left
-        width $side-nav
+        width $nav
         ul
             display block
         shadow-level(-1)
@@ -302,13 +302,13 @@ input, select, textarea
             &:hover, &.active
                 border-left 4px solid teal
     +above($large)
-        width $side-nav-large
+        width $nav-large
         a
             padding 20px 20px
             &:hover, &.active
                 border-left 10px solid teal
 
-.recipe
+.project
     background #FFF
     padding 0 20px 20px
     margin-bottom 20px
@@ -316,16 +316,16 @@ input, select, textarea
     z-index 1
     shadow-level(1)
     trans()
-    .remove-from-menu
+    .remove-from-gantt
         display none
-    &.in-menu
+    &.in-gantt
         background teal
         color #FFF
         h3
             border-bottom: rgba(255,255,255, 0.6) solid 3px
-        .add-to-menu
+        .add-to-gantt
             display none
-        .remove-from-menu
+        .remove-from-gantt
             display block
     h3
         font-size: 3em;
@@ -349,7 +349,7 @@ input, select, textarea
         &:hover
             color red
             opacity 0.6
-    .ingredient
+    .task
         display inline-block
         margin-right 10px
         font-size 1.2em
@@ -370,11 +370,11 @@ input, select, textarea
         transform translate3d(0, 0, 0)
 
 
-.menu-item
-    @extend .recipe
+.gantt-item
+    @extend .project
 
 .shopping-list
-    @extend .recipe
+    @extend .project
     padding 50px 5%
     list-style none
     li
@@ -390,4 +390,4 @@ input, select, textarea
         right 0
         left auto
         a
-            color dark-purp
+            color #E8846B

@@ -1,3 +1,7 @@
 Meteor.subscribe('projects');
 
-console.log(Meteor.settings.public.ga.account);
+Template.Projects.helpers({
+  projects: ()=> {
+    return Projects.find({});
+  }
+});
