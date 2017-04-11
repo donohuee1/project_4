@@ -17,6 +17,9 @@ ProjectSchema = new SimpleSchema({
     //default value. Make a check to make sure user is logged in before they can add a new project
     autoValue: function() {
       return this.userId
+    },
+    autoform: {
+      type: 'hidden'
     }
   },
   createdAt: {
@@ -24,6 +27,9 @@ ProjectSchema = new SimpleSchema({
     label: "Created At",
     autoValue: function() {
       return new Date()//returns current date to the createdAt field
+    },
+    autoform: {
+      type: 'hidden'
     }
   },
   startDate: {
