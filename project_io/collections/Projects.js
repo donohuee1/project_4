@@ -1,5 +1,5 @@
 //define Projects collection
-Projects = new Meteor.Collection('projects');
+Projects = new Mongo.Collection('projects');
 
 //rules for who is allowed to insert in projects function.  Only allowed if this is true(i.e. if userId exists)
 Projects.allow({
@@ -8,7 +8,35 @@ Projects.allow({
   }
 });
 
-
+Task = new SimpleSchema({
+  description: {
+    type: String
+  },
+  employeeLead: {
+    type: String
+  },
+  createdAt: {
+    type: Date,
+    autoValue: function() {
+      return new Date()//returns current date to the createdAt field
+    },
+    autoform: {
+      type: 'hidden'
+    }
+  },
+  startDate: {
+    type: Date,
+  },
+  endDate: {
+    type: Date,
+  },
+  completed: {
+    type: Boolean,
+  },
+  overDue: {
+    type: Boolean,
+  }
+});
 
 //Create new Schema
 ProjectSchema = new SimpleSchema({
@@ -56,6 +84,19 @@ ProjectSchema = new SimpleSchema({
   overDue: {
     type: Boolean,
     label: "Overdue"
+  },
+  //putting it in an array allows us to have a field that automatically has incrementing boxes. Can add more than one. Funciton of the autoform package.
+  tasks: {
+    type: [Task]
+  },
+  //whenever we add a new item it is not automatically added to the Gantt by itself.  
+  inGantt: {
+    type: Boolean,
+    defaultValue: false,
+    optional: true,
+    autoform: {
+      type: 'hidden'
+    }
   }
 });
 
