@@ -1,9 +1,20 @@
+FlowRouter.triggers.enter([function(context, redirect) {
+  //if user id doesn't exist, go to the home page
+  if(!Meteor.userId()) {
+    FlowRouter.go('home');
+  }
+}]);
+
 //using FlowRouter package: once you hit this route path, render this template
 FlowRouter.route('/', {
   //render specific template
   name: 'home',
   //what happens when you hit this route:
   action() {
+    //if user id exists, return true
+    if(Meteor.userId()) {
+      FlowRouter.go('project-book');
+    }
     //When you head to this page that's going to register as a page view in GA
     GAnalytics.pageview();
     BlazeLayout.render('HomeLayout');
@@ -24,7 +35,7 @@ FlowRouter.route('/project-book', {
 
 FlowRouter.route('/project/:id', {
   //render specific template
-  name: 'project-book',
+  name: 'project',
   //what happens when you hit this route:
   action() {
     //When you head to this page that's going to register as a page view in GA
