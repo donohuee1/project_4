@@ -2,7 +2,7 @@
   <article class="project {{#if inGantt}}in-gantt{{/if}}">
     <h3>{{title}}</h3>
     <!-- if editMode = true, then show this edit form -->
-    {{#if $.Session.get 'editMode'}}
+    {{#if editMode}}
       {{> quickForm collection="Projects" id=updateProjectId type="update" doc=this autosave=true}}
     {{else}}
       <p>{{description}}</p>
@@ -20,7 +20,6 @@
     {{/if}}
     <i class="fa fa-pencil"></i>
     <i class="fa fa-trash"></i>
-
 
   </article>
 </template>
