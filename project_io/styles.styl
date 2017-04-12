@@ -316,16 +316,18 @@ input, select, textarea
     z-index 1
     shadow-level(1)
     trans()
-    .remove-from-gantt
+    .btn-primary
+      display block
+    .btn-deny
         display none
     &.in-gantt
         background teal
         color #FFF
         h3
             border-bottom: rgba(255,255,255, 0.6) solid 3px
-        .add-to-gantt
+        .btn-primary
             display none
-        .remove-from-gantt
+        .btn-deny
             display block
     h3
         font-size: 3em;

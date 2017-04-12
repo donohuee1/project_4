@@ -55,3 +55,11 @@ FlowRouter.route('/project/:id', {
     BlazeLayout.render('MainLayout', {main: 'ProjectSingle'});
   }
 });
+
+FlowRouter.route('/gantt', {
+  name: 'gantt',
+  action() {
+    //inside the MainLayout, render Menu template
+    BlazeLayout.render('MainLayout', {main: 'Gantt'})
+  }
+});

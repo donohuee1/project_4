@@ -1,0 +1,13 @@
+<template name="Gantt">
+  <h1 class="page-title">My Current Gantt</h1>
+  {{#each projects}}
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+  {{/each}}
+
+  {{#each tasks}}
+  <h6>{{description}}</h6>
+  <p>{{employeeLead}}</p>
+  {{/each}}
+
+</template>
