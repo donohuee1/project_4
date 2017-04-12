@@ -21,3 +21,14 @@ FlowRouter.route('/project-book', {
     BlazeLayout.render('MainLayout', {main: 'Projects'});
   }
 });
+
+FlowRouter.route('/project/:id', {
+  //render specific template
+  name: 'project-book',
+  //what happens when you hit this route:
+  action() {
+    //When you head to this page that's going to register as a page view in GA
+    GAnalytics.pageview();
+    BlazeLayout.render('MainLayout', {main: 'ProjectSingle'});
+  }
+});
