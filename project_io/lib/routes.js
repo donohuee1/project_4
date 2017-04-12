@@ -1,3 +1,15 @@
+if (Meteor.isClient) {
+  //use gwendall:auth-client-callbacks package to route the user to project book page when they login
+  Accounts.onLogin(function() {
+    FlowRouter.go('project-book');
+  });
+
+  //use gwendall:auth-client-callbacks package to route the user to home page when they logout
+  Accounts.onLogout(function() {
+    FlowRouter.go('home');
+  });
+}
+
 FlowRouter.triggers.enter([function(context, redirect) {
   //if user id doesn't exist, go to the home page
   if(!Meteor.userId()) {
