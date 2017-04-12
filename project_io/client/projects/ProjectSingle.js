@@ -2,7 +2,9 @@ Template.ProjectSingle.onCreated(function() {
   var self = this;
   //unsubscribe us from any old subscriptions. When we go a different project, we're not still subscribed to the old one.
   self.autorun(function() {
-    self.subscribe('projects');
+    var id = FlowRouter.getParam('id');
+    //when we subscribe, we're passing in the single id, and the id is coming into our publish statement. 
+    self.subscribe('singleProject', id);
   });
 });
 
