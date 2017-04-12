@@ -1,0 +1,15 @@
+<template name="TaskList">
+  <h1 class="page-title">My Task List</h1>
+  <ul class="shopping-list">
+    {{#each taskList}}
+      {{#each tasks}}
+      <li>{{description}} - <span class="endDate">{{endDate}}</span></li>
+      {{/each}}
+    {{else}}
+      <li>
+        <p>Please add tasks to your Project</p>
+        <h6>Click <a href='/project-book'>Here</a> to manage your projects</h6>
+      </li>
+    {{/each}}
+  </ul>
+</template>

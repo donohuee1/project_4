@@ -63,3 +63,11 @@ FlowRouter.route('/gantt', {
     BlazeLayout.render('MainLayout', {main: 'Gantt'})
   }
 });
+
+FlowRouter.route('/task-list', {
+  name: 'task-list',
+  action() {
+    //inside the MainLayout, render TaskList template
+    BlazeLayout.render('MainLayout', {main: 'TaskList'})
+  }
+})
