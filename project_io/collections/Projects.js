@@ -113,6 +113,9 @@ Meteor.methods({
         inGantt: !currentState
       }
     });
+  },
+  deleteProject: function(id) {
+    Projects.remove(id);
   }
 });
 
