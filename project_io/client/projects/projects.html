@@ -2,8 +2,14 @@
   <!-- another template to add a new Project.  New project is looking for template called NewProject -->
   {{> NewProject}}
   <section class="projects">
-    {{#each projects}}
-      {{> Project}}
-    {{/each}}
+    <!-- while loading projects, will say loading, and will replace that once they're loaded -->
+    {{#if Template.subscriptionsReady}}
+      {{#each projects}}
+        {{> Project}}
+      {{/each}}
+    {{else}}
+    <p>Loading</p>
+    {{/if}}
+
   </section>
 </template>
