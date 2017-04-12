@@ -13,5 +13,6 @@
     {{else}}
       <button class="btn-primary toggle-gantt">Add to Gantt</button>
     {{/if}}
+    {{> quickForm collection="Projects" id=updateProjectId type="update" doc=this autosave=true}}
   </article>
 </template>
