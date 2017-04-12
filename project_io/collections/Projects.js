@@ -5,6 +5,10 @@ Projects = new Mongo.Collection('projects');
 Projects.allow({
   insert: function(userId, doc) {
     return !!userId;
+  },
+  //allows you to make updates
+  update: function(userId, doc) {
+    return !!userId;
   }
 });
 
@@ -89,7 +93,7 @@ ProjectSchema = new SimpleSchema({
   tasks: {
     type: [Task]
   },
-  //whenever we add a new item it is not automatically added to the Gantt by itself.  
+  //whenever we add a new item it is not automatically added to the Gantt by itself.
   inGantt: {
     type: Boolean,
     defaultValue: false,
@@ -97,6 +101,18 @@ ProjectSchema = new SimpleSchema({
     autoform: {
       type: 'hidden'
     }
+  }
+});
+
+Meteor.methods({
+  //
+  toggleGanttTask: function(id, currentState) {
+    Projects.update(id, {
+      //makes the inGantt value opposite of what it's currentState is
+      $set: {
+        inGantt: !currentState
+      }
+    });
   }
 });
 
