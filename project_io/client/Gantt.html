@@ -1,13 +1,18 @@
 <template name="Gantt">
   <h1 class="page-title">My Current Gantt</h1>
   {{#each projects}}
+    {{> GanttItem}}
+    <!-- if no recipes, do this: -->
+  {{else}}
+    <h3>Please add a project to your Gantt Chart</h3>
+    <p>Click <a href='/project-book'>Here</a> to manage your projects</p>
+  {{/each}}
+
+</template>
+
+<template name="GanttItem">
+  <div class="gantt-item">
     <h3>{{title}}</h3>
     <p>{{description}}</p>
-  {{/each}}
-
-  {{#each tasks}}
-  <h6>{{description}}</h6>
-  <p>{{employeeLead}}</p>
-  {{/each}}
-
+  </div>
 </template>
