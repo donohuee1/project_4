@@ -72,7 +72,6 @@ p
     background white
     padding 20px
     margin-bottom 20px
-    shadow-level(2)
     .fa-close
         position absolute
         top 0
@@ -95,12 +94,10 @@ p
     border solid 3px #E8846B
     border-radius 2px
     font-weight 800
-    shadow-level(1)
     trans()
     &:hover
         background @background - 20
         border-color @background
-        shadow-level(2)
     &.btn-primary
         background rgba(153, 127, 102, 0.4)
         color white
@@ -116,21 +113,17 @@ p
         color #E8846B
         background transparent
         border solid 2px #E8846B
-        shadow-level(0)
         &:hover
             background teal
             border-color @background
-            shadow-level(1)
     &.btn-text-dark
         color white
         background transparent
         border solid 2px white
-        shadow-level(0)
         &:hover
             background white
             color dark-purp
             border-color @background
-            shadow-level(1)
     &.btn-confirmation
         color black
         background green
@@ -143,12 +136,10 @@ p
         background transparent
         border solid 2px white
         opacity 0.4
-        shadow-level(-1)
         &:hover
             background red
             color white
             opacity 1
-            shadow-level(2)
             border-color @background
 
 input, select, textarea
@@ -202,7 +193,6 @@ input, select, textarea
     overflow hidden
     background #E8846B
     color white
-    shadow-level(2)
     ul
         margin 0
         padding 0
@@ -229,7 +219,6 @@ input, select, textarea
         width $nav
         ul
             display block
-        shadow-level(-1)
         a
             padding 20px 10px
             &:hover, &.active
@@ -239,7 +228,7 @@ input, select, textarea
         a
             padding 20px 20px
             &:hover, &.active
-                border-left 10px solid white
+                border-left 10px solid fuchsia
 
 .project
     background white
