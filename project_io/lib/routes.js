@@ -27,8 +27,6 @@ FlowRouter.route('/', {
     if(Meteor.userId()) {
       FlowRouter.go('project-book');
     }
-    //When you head to this page that's going to register as a page view in GA
-    GAnalytics.pageview();
     BlazeLayout.render('HomeLayout');
   }
 });
@@ -38,8 +36,6 @@ FlowRouter.route('/project-book', {
   name: 'project-book',
   //what happens when you hit this route:
   action() {
-    //When you head to this page that's going to register as a page view in GA
-    GAnalytics.pageview();
     //in MainLayout we made a dynamic template with the name 'main'. The string we pass it('Test') is the name of the template we want to render in the 'main' area of the MainLayout.
     BlazeLayout.render('MainLayout', {main: 'Projects'});
   }
@@ -50,8 +46,6 @@ FlowRouter.route('/project/:id', {
   name: 'project',
   //what happens when you hit this route:
   action() {
-    //When you head to this page that's going to register as a page view in GA
-    GAnalytics.pageview();
     BlazeLayout.render('MainLayout', {main: 'ProjectSingle'});
   }
 });
