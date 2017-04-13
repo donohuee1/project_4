@@ -8,34 +8,16 @@ Template.Projects.onCreated(function() {
     self.subscribe('projects');
   });
 });
-////////////////////////////
 
-// Template.Projects.helpers({
-//   projects: ()=> {
-//     return Projects.find({});
-//   }
-// });
 Template.Projects.helpers({
   projects: function() {
     return Projects.find({})
   }
 });
 
-//////////////////////////////
-
-// 
-// Template.Projects.events({
-//   'click .new-project': () => {
-//     //argument 1: name of the session --- arguement2: the data we want stored in the session
-//     Session.set('newProject', true);
-//     // //to retrieve the value of this session use Session.get...didn't work
-//     // var newProject = Session.get('newProject';)
-//     // console.log(newProject);
-//   }
-// });
-
 Template.Projects.events({
   'click .new-project': function(){
+    //argument 1: name of the session --- arguement2: the data we want stored in the session
     Session.set('newProject', true);
   }
 });
