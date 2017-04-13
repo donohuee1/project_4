@@ -1,6 +1,10 @@
 <template name="Projects">
-  <!-- another template to add a new Project.  New project is looking for template called NewProject -->
-  {{> NewProject}}
+  <!-- if new project = true, show the form, else show the button.  Show the button or the form.  -->
+  {{#if $.Session.get 'newProject'}}
+    {{> NewProject}}
+  {{else}}
+    <button class="new-project">New Project</button>
+  {{/if}}
   <section class="projects">
     <!-- while loading projects, will say loading, and will replace that once they're loaded -->
     {{#if Template.subscriptionsReady}}
