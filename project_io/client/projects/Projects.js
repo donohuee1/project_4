@@ -8,14 +8,22 @@ Template.Projects.onCreated(function() {
     self.subscribe('projects');
   });
 });
+////////////////////////////
 
+// Template.Projects.helpers({
+//   projects: ()=> {
+//     return Projects.find({});
+//   }
+// });
 Template.Projects.helpers({
-  projects: ()=> {
-    return Projects.find({});
+  projects: function() {
+    return Projects.find({})
   }
 });
 
-//
+//////////////////////////////
+
+// 
 // Template.Projects.events({
 //   'click .new-project': () => {
 //     //argument 1: name of the session --- arguement2: the data we want stored in the session
