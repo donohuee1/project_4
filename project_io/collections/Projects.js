@@ -83,11 +83,23 @@ ProjectSchema = new SimpleSchema({
   },
   completed: {
     type: Boolean,
-    label: "Completed"
+    label: "Has Project Been Completed?",
+    autoform: {
+      type: 'boolean-radios',
+      trueLabel: 'Project is Complete',
+      falseLabel: 'Project Is Not Complete',
+      value: false
+    }
   },
   overDue: {
     type: Boolean,
-    label: "Overdue"
+    label: "Is This Project Still Within Your Deadline?",
+    autoform: {
+      type: 'boolean-radios',
+      trueLabel: 'Project Is Past Deadline',
+      falseLabel: 'Project Is Still Within The Deadline',
+      value: false
+    }
   },
   //putting it in an array allows us to have a field that automatically has incrementing boxes. Can add more than one. Funciton of the autoform package.
   tasks: {

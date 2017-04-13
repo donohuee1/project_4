@@ -5,10 +5,12 @@
     {{#if editMode}}
       {{> quickForm collection="Projects" id=updateProjectId type="update" doc=this autosave=true}}
     {{else}}
-      <p>{{description}}</p>
+      <strong><p>{{description}}</p></strong>
       <p>
         {{#each tasks}}
-          <span class="tasks">{{description}} - {{employeeLead}}</span>
+          <span class="tasks">
+            <li>{{description}} - {{employeeLead}}</li>
+          </span>
         {{/each}}
       </p>
       <a href="/project/{{_id}}">View Details</a>

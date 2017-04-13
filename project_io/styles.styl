@@ -1,51 +1,5 @@
 /* CSS declarations go here */
 
-normalize-css()
-
-// Material Shadows
-shadow-level(l = 1)
-    if l == -1
-        box-shadow: inset -2px 7px 9px -7px rgba(0,0,0,0.7);
-    if l == 0
-        box-shadow: none;
-    if l == 1
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    if l == 2
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    if l == 3
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    if l == 4
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    if l == 5
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
-// Common Transition
-trans($sec = 0.3s)
-    transition: all $sec ease
-// Grid
-$xsmall = 340px
-$small = 500px
-$med = 700px
-$large = 960px
-$wide = 1200px
-
-// Colors
-black = #222
-grey = #D8D8D8
-light-grey = #EEE
-purp = #524763
-dark-purp = #373142
-red = #E54B4B
-teal = #82D8D8
-dark-teal = #66A6A6
-green = #CBE56C
-blue = #16528E
-bright-blue = #0082C8
-maroon = #6A2140
-light-red = #CA5765
-pink = #CF256D
-orange = #E8846B
-
 z = {
     neg: -7,
     lowest: 1,
@@ -59,15 +13,8 @@ z = {
     highest: 11
 }
 
-social = {
-    twitter: #00aced,
-    facebook: #3b5998,
-    google: #dd4b39,
-    youtube: #bb0000
-}
-
 $nav = 100px
-$nav-large = 200px
+$nav-large = 100px
 
 html
     box-sizing: border-box
@@ -85,9 +32,8 @@ header
     padding 20px
     fixed top left
     width 100%
-    height 70px
+    height 80px
     z-index: z.header
-    shadow-level(2)
     clearfix()
     h1
         margin 0
@@ -108,7 +54,7 @@ p
     margin-bottom 30px
 
 .billboard
-    background dark-purp
+    background #E8846B
     color #FFF
     font-size 2em
     text-align center
@@ -150,12 +96,12 @@ p
 .btn, button
     display inline-block
     cursor pointer
-    background purp
+    background #E8846B
     color #FFF
     text-decoration none
     text-transform uppercase
     padding 5px 15px
-    border solid 3px purp
+    border solid 3px #E8846B
     border-radius 2px
     font-weight 800
     shadow-level(1)
@@ -165,12 +111,11 @@ p
         border-color @background
         shadow-level(2)
     &.btn-primary
-        background teal
-        border-color teal
-        color dark-purp
+        background rgba(0, 0, 0, .5)
+        color white
         &:hover
-            background @background - 40
-            border-color @background
+            background #E8846B
+
     &.btn-deny
         background red
         border solid 3px @background
@@ -325,8 +270,8 @@ input, select, textarea
             border-bottom: rgba(255,255,255, 0.6) solid 3px
     h3
         font-size: 3em;
-        opacity: 0.3;
-        border-bottom: rgba(0,0,0, 0.3) solid 3px
+        color: #E8846B;
+        border-bottom: #E8846B solid 3px
         margin-top 0
         margin-bottom 10px
     button
