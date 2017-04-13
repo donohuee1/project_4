@@ -1,5 +1,5 @@
 Meteor.publish('projects', function() {
-  //only current users project will be available to them
+  //only current users project will be shown
   return Projects.find({projectLead: this.userId});
 });
 

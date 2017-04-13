@@ -5,6 +5,7 @@ Projects = new Mongo.Collection('projects');
 Projects.allow({
   insert: function(userId, doc) {
     return !!userId;
+    console.log(userId)
   },
   //allows you to make updates
   update: function(userId, doc) {
@@ -101,7 +102,7 @@ ProjectSchema = new SimpleSchema({
       value: false
     }
   },
-  //putting it in an array allows us to have a field that automatically has incrementing boxes. Can add more than one. Funciton of the autoform package.
+  //putting it in an array allows a field that automatically has incrementing boxes. Can add more than one. Funciton of the autoform package.
   tasks: {
     type: [Task]
   },
@@ -133,3 +134,6 @@ Meteor.methods({
 
 //attach the schema to our Collection
 Projects.attachSchema(ProjectSchema);
+
+//Tried to add this in and it seemed to just add an employee lead input box at the end of the New Project form
+// Projects.attachSchema(Task);
