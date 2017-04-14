@@ -6,8 +6,14 @@ Project.io is a project management app that will help you stay organized and del
 
 **Technologies Used:**
 
-- HTML / CSS / Javascript
 - Meteor-Blaze
+- HTML / Styl / Javascript
+- Heroku
+
+**Approach Taken**
+- Brainstormed
+- Settled on Gantt Chart idea
+- Read loads of documentation
 
 **Link to Trello:**  https://trello.com/b/fxfg7jHG/project-4
 
@@ -32,3 +38,8 @@ Project.io is a project management app that will help you stay organized and del
 ![chat_room](assets/wireframe_7.png)
 
 ![profile](assets/wireframe_8.png)
+
+**Unsolved Problems**
+- Gantt Chart
+- Styling
+- User Accounts: Full CRUD, OAuth
