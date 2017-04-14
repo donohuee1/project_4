@@ -43,3 +43,4 @@ Project.io is a project management app that will help you stay organized and del
 - Gantt Chart
 - Styling
 - User Accounts: Full CRUD, OAuth
+- Issues with Completed and Over Due field showing in the individual project view
