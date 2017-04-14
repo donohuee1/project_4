@@ -39,6 +39,11 @@ Project.io is a project management app that will help you stay organized and del
 
 ![profile](assets/wireframe_8.png)
 
+**Issues I Ran Into**
+- New Technology
+- Schema-less
+- Lots of Scaffolding
+
 **Unsolved Problems**
 - Gantt Chart
 - Styling
