@@ -1,0 +1,276 @@
+/* CSS declarations go here */
+
+$nav = 50px
+$nav-large = 100px
+
+body
+    background rgba(153, 127, 102, 0.3)
+    padding: 80px 0 50px
+
+header
+    color white
+    background: #E8846B
+    padding 10px
+    fixed top
+    width 100%
+    height 75px
+    h1
+        margin 0 auto
+        font-size 30px
+        text-align center
+        font-family Palatino
+    .login-buttons-dropdown-align-
+        float right
+        a
+            color white
+            font-family Palatino
+p
+    color black
+
+.page-title
+    text-align center
+    margin-bottom 30px
+    border solid 3px #E8846B
+    background white
+    color #E8846B
+    font-family Palatino
+
+.welcome
+    background #E8846B
+    color white
+    font-size 30px
+    text-align center
+    padding 60px
+    width 70%
+    height 300px
+    margin 100px auto
+    border-radius 8px
+    font-family Palatino
+
+    h2
+        padding 15px
+        font-family Palatino
+
+.main-layout
+    lost-center 90%
+    margin-top 20px
+    +above($med)
+        lost-center 90%
+        padding-left $nav
+    +above($large)
+        lost-center 80%
+        margin-top 40px
+        padding-left $nav-large
+
+.new-project
+    margin-bottom 20px
+
+.new-project-container
+    position relative
+    background white
+    padding 20px
+    margin-bottom 20px
+    .fa-close
+        position absolute
+        top 0
+        right 0
+        padding 20px
+    label
+        display block
+        margin-bottom 10px
+    textarea, input
+        width 100%
+
+.btn, button
+    display inline-block
+    cursor pointer
+    background #E8846B
+    color white
+    text-decoration none
+    text-transform uppercase
+    padding 5px 15px
+    border solid 3px #E8846B
+    border-radius 2px
+    font-weight 800
+    &:hover
+        background @background - 20
+        border-color @background
+    &.btn-primary
+        background rgba(153, 127, 102, 0.4)
+        color white
+        &:hover
+            background #E8846B
+
+    &.btn-deny
+        background rgba(153, 127, 102, 0.5)
+        color white
+        &:hover
+          background #E8846B
+    &.btn-text
+        color #E8846B
+        background transparent
+        border solid 2px #E8846B
+        &:hover
+            background teal
+            border-color @background
+    &.btn-text-dark
+        color white
+        background transparent
+        border solid 2px white
+        &:hover
+            background white
+            color dark-purp
+            border-color @background
+
+    &.btn-cancel
+        color white
+        background transparent
+        border solid 2px white
+        opacity 0.4
+        &:hover
+            background red
+            color white
+            opacity 1
+            border-color @background
+
+input, select, textarea
+    color #E8846B
+    background white
+    border solid 2px light-grey
+    border-radius 2px
+    font-weight 800
+    width 100%
+    padding 6px 10px
+    margin-bottom 10px
+    &.static-input
+        border none
+        background transparent
+
+.list-group
+    list-style none
+    padding 0
+
+.panel-body
+    .form-group
+        lost-column 1/2
+
+.autoform-remove-item.btn
+    background light-grey
+    box-shadow none
+    border none
+    border-radius 50%
+    font-size 1em
+    height: 25px
+    width: 25px
+    text-align: center
+    display: block
+    padding: 0
+
+.autoform-add-item.btn
+    width 100%
+    border-radius 0
+    border none
+    box-shadow none
+    background light-grey
+
+
+.autoform-remove-item-wrap
+    vertical-align middle
+
+.nav
+    fixed bottom left
+    height 100px
+    width 100%
+    overflow hidden
+    background #E8846B
+    color white
+    ul
+        margin 0
+        padding 0
+        display flex
+        justify-content space-between
+        list-style none
+    a
+        color white
+        text-decoration none
+        padding 20px 20px
+        display block
+        text-align center
+        &:hover, &.active
+            background #E8846B
+    i
+        display block
+        font-size 2em
+        margin-bottom 10px
+    +above($med)
+        height 100%
+        padding 120px 0
+        fixed top left
+        width $nav
+        ul
+            display block
+        a
+            padding 20px 10px
+            &:hover, &.active
+                border-left 4px solid teal
+    +above($large)
+        width $nav-large
+        a
+            padding 20px 20px
+            &:hover, &.active
+                border-left 10px solid fuchsia
+
+.project
+    background white
+    padding 0 20px 20px
+    margin-bottom 20px
+    position relative
+    .btn-primary, .btn-deny
+      display block
+    &.in-gantt
+        background rgba(0, 0, 0, .5)
+        color white
+        h3
+            border-bottom: rgba(255, 255, 255, .5) solid 3px
+            font-family Palatino
+    h3
+        font-size: 3em;
+        color: #E8846B;
+        border-bottom: #E8846B solid 3px
+        margin-top 0
+        margin-bottom 10px
+        font-family Palatino
+
+    button
+        margin-top 20px
+    .fa-trash, .fa-pencil
+        opacity 0.3
+        cursor pointer
+        position absolute
+        top 0
+        right 0
+        font-size 1.6em
+        display block
+        padding 20px
+        color black
+        &:hover
+            color #E8846B
+            opacity 0.6
+    .fa-pencil
+        right 40px
+        &:hover
+          color #E8846B
+    .task
+        display inline-block
+        margin-right 10px
+        font-size 1.2em
+
+.gantt-item
+    @extend .project
+
+.login-buttons-dropdown-align-
+    #login-dropdown-list
+        right 0
+        left auto
+        a
+            color #E8846B
